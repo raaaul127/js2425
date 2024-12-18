@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const pretBaza = 40000;
+        const diferentaPret = 5000;
+        const modelMasina = 'BMW X';
+
+        for (let i = 1; i <= 7; i++) {
+
+            const pret = pretBaza + (i - 1) * diferentaPret;
+            let raspuns =  window.alert(`${modelMasina}${i} costă de la ${pret} euro.`);
+        }
+
+
+        // a = modelMasina
+        // b = pretBaza
+        // let masina = window.prompt("Scrieti modelul masinii", "BMW")
+        // window.alert("Masina " + a + " costa de la " + b + " EURO" )
+    </script>
+</body>
+</html>
