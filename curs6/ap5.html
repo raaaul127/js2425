@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicatia 5 curs 6</title>
+</head>
+<body>
+    <script>
+
+        //Metoda crearii unui obiect pe baza altui obiect
+
+        function produsNou(nume, pret, stoc, dataFabricarii) {
+            this.nume = nume;
+            this.pret = pret;
+            this.stoc = stoc;
+            this.dataFabricarii = dataFabricarii;
+            this.afiseaza = function () {
+                console.log(`Produsul ${this.nume} are pretul de ${this.pret} lei`);
+            },
+            this.cumpara = function () {
+                if (this.stoc > 0) {
+                    this.stoc -= 1;
+                    console.log(`Produsul ${this.nume} a fost adaugat in cos`);
+                }
+            }
+        }
+        const paine = new produsNou('Paine', 8, 36, '2022-02-22');
+        paine.afiseaza();
+        paine.cumpara();
+        const apa = new produsNou('Apa', 3.5, 26, '2023-04-20');
+        console.log(apa.nume);
+
+        const paineNeagra = Object.assign(paine);
+        paineNeagra.afiseaza();
+        paineNeagra.nume = 'Paine neagra cu seminte';
+        console.log(paineNeagra);
+
+    </script>
+</body>
+</html>
